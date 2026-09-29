@@ -60,7 +60,7 @@ briefcast-runs/20260929-0715-world-news/
   sources.json          # 全部候选来源及元数据、核验状态
   facts.json            # 带出处的事实陈述
   content-plan.json     # 共用的编辑计划
-  brief.primary.md      # 简报正文——干净的 Markdown，可直接朗读
+  brief.primary.md      # 简报正文——纯可朗读文本，可直接交给任何主播或 TTS
   brief.secondary.md    # 可选的第二语言版本
   manifest.json         # 状态、产物清单、警告
 ```
@@ -75,7 +75,7 @@ Briefcast 有意止步于文本：
 briefcast → 文本 → 任意主播 / TTS 引擎 / 视频流水线
 ```
 
-稿子只含 `#`/`##` 标题和纯段落——没有 URL、引用标记、表格、图片——引擎可以直接顺读。想要有表现力的 Gemini 语音，[gemini-tts-director](https://github.com/LcpMarvel/gemini-tts-director) 可以直接消费这些稿子。
+稿子是纯可朗读段落——没有任何 Markdown 语法、标题、URL、引用标记、表格、图片——任何引擎从头到尾读出来的效果都一样；封面和 App 用的展示标题放在 `manifest.json` 里。想要有表现力的 Gemini 语音，[gemini-tts-director](https://github.com/LcpMarvel/gemini-tts-director) 可以直接消费这些稿子。
 
 ## 文档
 

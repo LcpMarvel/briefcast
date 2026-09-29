@@ -41,6 +41,6 @@ Example: "给一个二年级孩子做一期今天值得知道的世界新闻，�
 
 - Text only. This skill does not generate audio or video, publish to platforms, or schedule runs; those belong to whatever consumes the text and `manifest.json`.
 - No fabrication. If research fails or evidence is thin, deliver fewer items, mark uncertainty in the brief, or fail the stage honestly. A plausible-sounding invented "latest news" item is the worst possible outcome.
-- Scripts stay clean for speaking: no URLs, citation markers, tables, images, or editor notes in the body. Provenance lives in `sources.json`, `facts.json`, and `manifest.json`.
+- Scripts are plain speakable text: paragraphs only — no Markdown syntax, no headings, no URLs, citation markers, or editor notes. Every character in the file is meant to be read aloud; display titles go in `manifest.json`. Provenance lives in `sources.json`, `facts.json`, and `manifest.json`.
 - A difficulty target such as Lexile 600 is a generation goal, not a certified measurement. Never claim official certification.
 - Do not assume the brief is daily, morning, news, child-oriented, or headed for any platform. Depth and tone follow the audience and purpose in the profile.

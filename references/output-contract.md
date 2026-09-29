@@ -64,6 +64,7 @@ Fields the user never mentioned take sensible defaults; do not ask about them (s
   "languages": {
     "primary": {
       "code": "zh-CN",
+      "title": "小小世界新闻：大熊猫坐飞机，小盒子去月亮",
       "script": "brief.primary.md",
       "status": "reviewed",
       "estimated_duration_minutes": 9.5,
@@ -101,6 +102,7 @@ Fields the user never mentioned take sensible defaults; do not ask about them (s
 }
 ```
 
+- `languages.*.title` is display metadata for apps and covers. The script files themselves carry no heading — in audio, the spoken opening line does the title's job.
 - `status`: `complete` | `partial` (some artifact failed, the rest usable) | `failed`.
 - `stages.*`: `done` | `skipped` | `failed`.
 - `languages.*.status`: `written` | `reviewed` | `failed`.

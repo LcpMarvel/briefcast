@@ -60,7 +60,7 @@ briefcast-runs/20260929-0715-world-news/
   sources.json          # every candidate source with metadata and verification status
   facts.json            # verified statements with provenance
   content-plan.json     # the shared editorial plan
-  brief.primary.md      # the brief — clean Markdown, ready to read aloud
+  brief.primary.md      # the brief — plain speakable text, ready for any narrator or TTS
   brief.secondary.md    # optional second-language version
   manifest.json         # status, artifacts, warnings
 ```
@@ -75,7 +75,7 @@ Briefcast stops at text on purpose:
 briefcast → TEXT → any narrator / TTS engine / video pipeline
 ```
 
-The scripts contain only `#`/`##` headings and plain paragraphs — no URLs, citation markers, tables, or images — so engines read them straight through. For expressive Gemini speech, [gemini-tts-director](https://github.com/LcpMarvel/gemini-tts-director) consumes these scripts as written.
+The scripts are plain speakable paragraphs — no Markdown syntax, headings, URLs, citation markers, tables, or images — so every engine reads them exactly the same, top to bottom; display titles for covers and apps live in `manifest.json`. For expressive Gemini speech, [gemini-tts-director](https://github.com/LcpMarvel/gemini-tts-director) consumes these scripts as written.
 
 ## Documentation
 

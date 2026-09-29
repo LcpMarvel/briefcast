@@ -4,10 +4,12 @@ The primary script is edited for listening — not a stitched-together summary o
 
 ## Structure
 
-- An `#` title, then a short opening that tells the listener what this brief covers and why it is worth their next few minutes.
-- One `##` section per item, in plan order, with context and transitions a listener can follow without scrolling back.
+The script is a continuous monologue, not a document. Every character in the file is meant to be spoken, in order; nothing exists for the eye alone.
+
+- Open with a spoken title line: a sentence that names the brief and what it covers ("你好呀，今天的新闻时间到了……"), doing in speech what a headline does in print.
+- One paragraph group per item, in plan order. Structure is carried by spoken transitions ("第一条新闻……", "接下来……"), never by visual separators — a listener who cannot scroll back must always know where they are.
 - Within an item: facts first, then `why_it_matters`, then whatever explanation the planned concepts need.
-- A short closing; for child audiences, optionally one open question.
+- Close briefly; for child audiences, optionally one open question.
 
 ## Ear rules
 
@@ -24,15 +26,14 @@ Aim the primary script at `target_duration_minutes` using the rates in [Output c
 
 ## Clean text
 
-The script body is the deliverable; keep it directly speakable. It must contain none of:
+The script is the deliverable: plain text where every character is meant to be spoken. It must contain none of:
 
 - source URLs
 - citation markers or footnote calls
-- Markdown tables
-- images
+- Markdown syntax of any kind — no `#` headings, no bold/italic markers, no bullet lists, no tables, no images
 - editor notes, stage directions, or review annotations
 
-Use only: `#` title, `##` per item, plain paragraphs. Skip emphasis decoration a TTS voice would read awkwardly. Provenance and editing notes live in `sources.json`, `facts.json`, and `manifest.json` — never in the script.
+Paragraph breaks are the only formatting: they group thoughts and give a narrator natural pause points, and no engine reads them aloud. A display title for apps and covers belongs in `manifest.json` (`languages.*.title`), never in the script — in audio, the spoken opening line does the title's job. Provenance and editing notes live in `sources.json`, `facts.json`, and `manifest.json` — never in the script.
 
 ## Children {#children}
 
