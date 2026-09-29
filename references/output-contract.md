@@ -72,6 +72,7 @@ Fields the user never mentioned take sensible defaults; do not ask about them (s
     },
     "secondary": {
       "code": "en",
+      "title": "News for You: Pandas, a New Moon Crater, and a Tiny Wild Cat",
       "script": "brief.secondary.md",
       "status": "reviewed",
       "estimated_duration_minutes": 7.0,
@@ -102,7 +103,7 @@ Fields the user never mentioned take sensible defaults; do not ask about them (s
 }
 ```
 
-- `languages.*.title` is display metadata for apps and covers. The script files themselves carry no heading — in audio, the spoken opening line does the title's job.
+- Every language entry carries its own `title` — display metadata for apps and covers, not part of the script. The script files themselves carry no heading; in audio, the spoken opening line does the title's job.
 - `status`: `complete` | `partial` (some artifact failed, the rest usable) | `failed`.
 - `stages.*`: `done` | `skipped` | `failed`.
 - `languages.*.status`: `written` | `reviewed` | `failed`.

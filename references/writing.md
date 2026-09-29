@@ -33,7 +33,7 @@ The script is the deliverable: plain text where every character is meant to be s
 - Markdown syntax of any kind — no `#` headings, no bold/italic markers, no bullet lists, no tables, no images
 - editor notes, stage directions, or review annotations
 
-Paragraph breaks are the only formatting: they group thoughts and give a narrator natural pause points, and no engine reads them aloud. A display title for apps and covers belongs in `manifest.json` (`languages.*.title`), never in the script — in audio, the spoken opening line does the title's job. Provenance and editing notes live in `sources.json`, `facts.json`, and `manifest.json` — never in the script.
+Paragraph breaks are the only formatting: they group thoughts and give a narrator natural pause points, and no engine reads them aloud. A display title for apps and covers belongs in `manifest.json` (`languages.*.title`, one per language), never in the script — in audio, the spoken opening line does the title's job. Provenance and editing notes live in `sources.json`, `facts.json`, and `manifest.json` — never in the script.
 
 ## Children {#children}
 
