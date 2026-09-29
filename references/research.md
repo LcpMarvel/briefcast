@@ -34,6 +34,7 @@ Evergreen topics with no freshness requirement need no live research, but verify
 ```
 
 - `published_at` only when the source states it; `retrieved_at` always, from the actual fetch time.
+- `source_url` is the exact article page, never a site root; if the deep link could not be captured, say so in `verification.notes`.
 - `verification.status`: `verified` (independent confirmation), `single-source`, `contested` (sources disagree), `unverified`.
 - `factual_summary` records claims, not the headline's spin.
 
