@@ -14,22 +14,28 @@ Evergreen topics with no freshness requirement need no live research, but verify
 
 ## Candidate record
 
+`sources.json` is exactly `{"candidates": [ ... ]}` — one record per candidate, no other top-level shape:
+
 ```json
 {
-  "id": "src-1",
-  "title": "Reusable launcher completes second flight",
-  "source": "Reuters",
-  "source_url": "https://example.com/reports/launcher-second-flight",
-  "published_at": "2026-09-28T08:00:00Z",
-  "retrieved_at": "2026-09-29T21:30:00+08:00",
-  "topic": "space",
-  "factual_summary": "What this source actually says, independent of its framing.",
-  "verification": {
-    "status": "verified",
-    "notes": "confirmed independently by src-2"
-  },
-  "used": true,
-  "exclusion_reason": null
+  "candidates": [
+    {
+      "id": "src-1",
+      "title": "Reusable launcher completes second flight",
+      "source": "Reuters",
+      "source_url": "https://example.com/reports/launcher-second-flight",
+      "published_at": "2026-09-28T08:00:00Z",
+      "retrieved_at": "2026-09-29T21:30:00+08:00",
+      "topic": "space",
+      "factual_summary": "What this source actually says, independent of its framing.",
+      "verification": {
+        "status": "verified",
+        "notes": "confirmed independently by src-2"
+      },
+      "used": true,
+      "exclusion_reason": null
+    }
+  ]
 }
 ```
 

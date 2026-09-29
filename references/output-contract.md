@@ -129,6 +129,18 @@ Before marking a language `reviewed`:
 
 A failed review keeps the draft, records the failure, and leaves that language below `reviewed` — never mark `complete` over an unfinished review.
 
+## Packaging gate
+
+Prose rules erode under a struggling research session. Before setting `manifest.json` status to `complete`, run these checks mechanically — actually execute them against the files, don't recall them from memory:
+
+1. **Speakable scripts.** `grep -nE '^#|^\s*[-*+] |\*\*|http|www\.|\|---|\]\(|!\[' brief.primary.md brief.secondary.md` returns nothing. Any hit: strip the syntax from the script, not just from the check.
+2. **Traceable sources.** In `sources.json`, every record with `used: true` has a `source_url` that is an exact article page — not `null`, not a bare domain (`^https?://[^/]+/?$`). A violation is fixed by finding the same story on a traceable source and swapping it in, or by excluding the candidate — and if that leaves an item unsupported, dropping the item with a warning. Never fix it by keeping the root URL.
+3. **Language entries complete.** Every enabled language in `manifest.json` carries `code`, `script`, `title`, and `estimated_duration_minutes`.
+4. **Container shapes.** `sources.json` is exactly `{"candidates": [ ... ]}`; `facts.json` is exactly `{"facts": [ ... ]}`. No other top-level shape.
+5. **Reference integrity.** Every `source_refs` in `facts.json` and `content-plan.json` points to an existing source id; every `core_facts` in `content-plan.json` points to an existing fact id.
+
+If a check cannot be made to pass, degrade honestly — fewer items, `partial` status, warnings — and say so in `manifest.json`. A gate that "passes" by re-running the check with the files unchanged was not run.
+
 ## Resume
 
 When a run directory's `manifest.json` exists and `status` is not `complete`:

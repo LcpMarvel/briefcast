@@ -21,7 +21,7 @@ Every stage writes its artifacts into a run directory and updates `manifest.json
 4. **Plan.** Before any script, write `content-plan.json`: per item the core facts, why it matters, concepts to explain, and must-not-overstate constraints. Both language versions are composed from this plan. Read [Selection and planning](references/planning.md).
 5. **Write.** Compose `brief.primary.md` for the ear — edited for listening, not a stitched-together summary of pages. Read [Writing for the ear](references/writing.md).
 6. **Adapt.** If a secondary language is enabled, compose `brief.secondary.md` independently from the same plan, never by translating the primary script; control difficulty to the requested level and run an independent review. Read [Secondary language](references/secondary-language.md).
-7. **Review & package.** Check both scripts against the plan, the facts, and the clean-text rules, then finalize `manifest.json` so a downstream stage finds every artifact by reading it alone. Read [Output contract](references/output-contract.md).
+7. **Review & package.** Check both scripts against the plan, the facts, and the clean-text rules, then run the packaging gate — the mechanical checks in [Output contract](references/output-contract.md#packaging-gate) — before finalizing `manifest.json` as `complete`. A downstream stage should find every artifact by reading the manifest alone.
 
 ## Question policy
 
