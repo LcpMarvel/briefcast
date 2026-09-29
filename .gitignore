@@ -1,0 +1,6 @@
+# Local runs and installed copies
+/briefcast-runs/
+/.agents/
+/.claude/
+/.codex/
+.DS_Store

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Briefcast"
+  short_description: "Turn any topic into a listener-ready text brief: research, verify, select, and write for the ear"
+  default_prompt: "Use $briefcast to research a topic and write a listener-ready brief."
